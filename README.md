@@ -42,3 +42,10 @@ to write your content.
 ## Choose you license
 
 [Choose a License for your self](https://choosealicense.com)
+
+
+# Common Dependencies
+
+- [Flask](http://flask.pocoo.org/)
+- [Click](https://click.palletsprojects.com)
+- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
