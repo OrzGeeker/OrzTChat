@@ -1,6 +1,9 @@
 # !/usr/bin/env bash
 # -*-: coding: utf-8 -*-
 
+python update_version.py
+git add setup.py
+git commit -m 'update version number'
 git push origin master
 rm -rf ./dist/*
 python setup.py release
