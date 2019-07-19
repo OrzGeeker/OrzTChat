@@ -2,9 +2,19 @@
 # -*-: coding: utf-8 -*-
 
 python update_version.py
-git add setup.py
-git commit -m 'update version number'
-git push origin master
-rm -rf ./dist/*
-python setup.py release
-twine upload ./dist/*
+if [[ $? -eq 0 ]];
+then
+    git add setup.py
+    git commit -m 'update version number'
+    git push origin master
+    rm -rf ./dist/*
+    
+    ./make_env
+    source py2/bin/activate
+
+    pip install -r requirements
+    python setup.py release
+    twine upload ./dist/*
+
+    deactivate
+fi
